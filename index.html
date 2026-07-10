@@ -58,7 +58,6 @@
     transition: background 0.25s ease, color 0.25s ease;
   }
 
-  /* ---------- THEME TOGGLE ---------- */
   .theme-toggle{
     font-family: var(--mono);
     font-size: 12.5px;
@@ -75,10 +74,8 @@
   }
   .theme-toggle:hover{ border-color: var(--accent); color: var(--accent); }
 
-  /* ---------- SCROLLSPY ---------- */
   nav a.active{ color: var(--accent); border-bottom-color: var(--accent); }
 
-  /* ---------- SCROLL REVEAL ---------- */
   .reveal{
     opacity: 0;
     transform: translateY(18px);
@@ -86,7 +83,6 @@
   }
   .reveal.is-visible{ opacity: 1; transform: translateY(0); }
 
-  /* ---------- COPY EMAIL ---------- */
   .copy-btn{
     background: none;
     border: 1px solid #3A4650;
@@ -110,7 +106,6 @@
   }
   .copy-toast.show{ opacity: 1; }
 
-  /* ---------- QUERY CYCLER ---------- */
   .query-more{
     margin-top: 18px;
     display: flex;
@@ -144,7 +139,6 @@
   .extra-terminal.show{ display: block; }
   .extra-terminal .term-line{ margin-bottom: 6px; }
 
-  /* ---------- MINI CONSOLE ---------- */
   .console{
     background: #1B222A;
     color: #E7E4D8;
@@ -205,7 +199,6 @@
     padding: 0 24px;
   }
 
-  /* ---------- NAV ---------- */
   header{
     position: sticky;
     top: 0;
@@ -257,7 +250,6 @@
     .navbar nav ul{ gap: 12px; font-size: 11px; flex-wrap: wrap; justify-content:flex-end; }
   }
 
-  /* ---------- HERO / TERMINAL ---------- */
   .hero{
     padding: 72px 0 56px;
   }
@@ -341,7 +333,6 @@
     margin: 0;
   }
 
-  /* ---------- SECTION HEADERS (SQL comment style) ---------- */
   section{ padding: 52px 0; border-top: 1px solid var(--rule); }
   section:first-of-type{ border-top: none; }
   h2.sec-title{
@@ -351,14 +342,12 @@
     margin: 0 0 18px;
   }
 
-  /* ---------- ABOUT ---------- */
   .about p{ max-width: 62ch; color: var(--ink); }
   .about .highlight{
     color: var(--accent);
     font-weight: 600;
   }
 
-  /* ---------- SKILLS ---------- */
   .skills-table{
     width: 100%;
     border-collapse: collapse;
@@ -401,7 +390,6 @@
     .skills-table td:last-child{ margin-top: 2px; }
   }
 
-  /* ---------- PROJECT / SCHEMA ---------- */
   .project-card{
     background: var(--panel);
     border: 1px solid var(--rule);
@@ -481,7 +469,6 @@
   }
   .project-list li{ margin-bottom: 8px; }
 
-  /* ---------- EDUCATION ---------- */
   .edu-row{
     display:flex;
     gap: 20px;
@@ -503,7 +490,6 @@
   .edu-body h3{ margin: 0 0 4px; font-size: 16px; }
   .edu-body p{ margin:0; color: var(--ink-soft); font-size: 14px; }
 
-  /* ---------- CONTACT ---------- */
   .contact-card{
     background: #1B222A;
     color: #E7E4D8;
@@ -526,17 +512,11 @@
     font-family: var(--mono);
   }
 
-  /* =====================================================================
-     АДАПТИВНАЯ ВЁРСТКА ПОД ВСЕ УСТРОЙСТВА
-     ===================================================================== */
-
-  /* ---------- Планшеты и небольшие ноутбуки (<=900px) ---------- */
   @media (max-width: 900px){
     .wrap{ padding: 0 20px; }
     .navbar{ padding: 14px 20px; }
   }
 
-  /* ---------- Мобильные телефоны (<=640px), уточнения ---------- */
   @media (max-width: 640px){
     .wrap{ padding: 0 16px; }
     .navbar{ padding: 12px 16px; row-gap: 10px; }
@@ -561,7 +541,6 @@
     .console-inputrow{ flex-wrap: wrap; }
   }
 
-  /* ---------- Маленькие телефоны (<=480px) ---------- */
   @media (max-width: 480px){
     .navbar{ flex-direction: column; align-items: stretch; gap: 12px; }
     .navbar .brand{ text-align: center; }
@@ -574,20 +553,17 @@
     .project-head{ flex-direction: column; align-items: flex-start; gap: 6px; }
   }
 
-  /* ---------- Очень узкие экраны (<=360px) ---------- */
   @media (max-width: 360px){
     .schema{ grid-template-columns: 1fr; }
     .navbar nav ul{ gap: 8px; font-size: 10.5px; }
     .hero h1{ font-size: 19px; }
   }
 
-  /* ---------- Увеличенные зоны нажатия на сенсорных устройствах ---------- */
   @media (hover: none) and (pointer: coarse){
     .theme-toggle, .query-btn, .copy-btn{ padding-top: 10px; padding-bottom: 10px; }
     .console-inputrow input{ padding: 6px 0; }
   }
 
-  /* ---------- Поддержка вырезов (notch) на мобильных устройствах ---------- */
   @supports (padding: max(0px)){
     .navbar{
       padding-left: max(16px, env(safe-area-inset-left));
@@ -596,12 +572,10 @@
     footer{ padding-bottom: max(50px, env(safe-area-inset-bottom)); }
   }
 
-  /* ---------- Широкие экраны и большие мониторы ---------- */
   @media (min-width: 1440px){
     .wrap{ max-width: 980px; }
   }
 
-  /* ---------- Альбомная ориентация на телефонах (короткая высота) ---------- */
   @media (max-height: 480px) and (orientation: landscape){
     .hero{ padding: 28px 0 24px; }
     section{ padding: 30px 0; }
@@ -617,7 +591,7 @@
       <ul>
         <li><a href="#about">Обо мне</a></li>
         <li><a href="#skills">Навыки</a></li>
-        <li><a href="#project">Проект</a></li>
+        <li><a href="#project">Работы</a></li>
         <li><a href="#console">Консоль</a></li>
         <li><a href="#education">Образование</a></li>
         <li><a href="#contact">Контакты</a></li>
@@ -677,7 +651,7 @@
   <section id="about" class="about reveal">
     <h2 class="sec-title">Обо мне</h2>
     <p>
-      Выпускник колледжа РКРИПТ по специальности «Веб-разработчик». Занимаюсь
+      Выпускник колледжа РКРИПТ по специальности «Разработчик веб и мультимедийных приложений». Занимаюсь
       backend- и frontend-разработкой: от проектирования базы данных до
       подключения интерфейса к серверу и деплоя готового сайта на хостинг.
       В дипломном проекте прошёл весь путь разработки сайта для реальной
@@ -746,7 +720,7 @@
   </section>
 
   <section id="project" class="reveal">
-    <h2 class="sec-title">Дипломный проект</h2>
+    <h2 class="sec-title">Мои работы</h2>
     <div class="project-card">
       <div class="project-head">
         <h3>Сайт ООО «Посейдон»</h3>
@@ -755,7 +729,7 @@
       <p class="project-desc">
         Сайт для зерновой торговой компании: каталог продукции, корзина,
         избранное и панель администратора для управления товарами и заказами.
-        Разработан и развёрнут как часть дипломного проекта.
+        Разработан и развёрнут от идеи до продакшна.
       </p>
       <a class="live-link" href="https://poseidonsell.site.je/" target="_blank" rel="noopener">
         <span class="live-dot" aria-hidden="true"></span> Открыть сайт — Посейдон, зерновые культуры оптом ↗
@@ -811,7 +785,7 @@
       <span class="edu-badge">диплом</span>
       <div class="edu-body">
         <h3>РКРИПТ (Ростовский колледж радиоэлектроники, информатики и приборостроения)</h3>
-        <p>Специальность «Веб-разработчик»</p>
+        <p>Специальность «Разработчик веб и мультимедийных приложений»</p>
       </div>
     </div>
   </section>
@@ -824,6 +798,7 @@
         <span class="k">EMAIL</span> = <a href="mailto:rudomaharoman@gmail.com">rudomaharoman@gmail.com</a><button class="copy-btn" id="copyEmailBtn" type="button">copy</button><span class="copy-toast" id="copyToast">скопировано ✓</span>
       </div>
       <div class="contact-line"><span class="k">TELEGRAM</span> = <a href="https://t.me/marcisyka" target="_blank" rel="noopener">@marcisyka</a></div>
+      <div class="contact-line"><span class="k">GITHUB</span> = <a href="https://github.com/huemue" target="_blank" rel="noopener">github.com/huemue</a></div>
     </div>
   </section>
 
@@ -837,7 +812,6 @@
   console.log('%cНе баг, а фича 🐛✨', 'font-size:16px; font-weight:bold; color:#B98A1E;');
   console.log('%cРаз уж ты открыл консоль — привет! Значит, тебе тоже интересно, как это устроено.', 'color:#56636B; font-size:12px;');
 
-  /* ---------- ТЕМА (тёмная / светлая), с запоминанием выбора ---------- */
   (function () {
     var root = document.documentElement;
     var btn = document.getElementById('themeToggle');
@@ -866,7 +840,6 @@
     });
   })();
 
-  /* ---------- ЖИВОЙ АПТАЙМ СТРАНИЦЫ ---------- */
   (function () {
     var start = Date.now();
     var el = document.getElementById('uptime');
@@ -880,7 +853,6 @@
     setInterval(tick, 1000);
   })();
 
-  /* ---------- СЧЁТЧИК "bugs_today" ---------- */
   (function () {
     var el = document.getElementById('bugCounter');
     var count = 0;
@@ -891,7 +863,6 @@
     setInterval(bump, 7000 + Math.random() * 6000);
   })();
 
-  /* ---------- SCROLLSPY: подсветка активного пункта меню ---------- */
   (function () {
     var links = Array.prototype.slice.call(document.querySelectorAll('nav a[href^="#"]'));
     var sections = links
@@ -912,7 +883,6 @@
     sections.forEach(function (s) { observer.observe(s); });
   })();
 
-  /* ---------- ПОЯВЛЕНИЕ СЕКЦИЙ ПРИ СКРОЛЛЕ ---------- */
   (function () {
     var els = document.querySelectorAll('.reveal');
     var observer = new IntersectionObserver(function (entries) {
@@ -926,7 +896,6 @@
     els.forEach(function (el) { observer.observe(el); });
   })();
 
-  /* ---------- КОПИРОВАНИЕ EMAIL ---------- */
   (function () {
     var btn = document.getElementById('copyEmailBtn');
     var toast = document.getElementById('copyToast');
@@ -939,7 +908,6 @@
     });
   })();
 
-  /* ---------- ЦИКЛИЧЕСКИЙ "ЗАПРОС" В HERO ---------- */
   (function () {
     var queries = [
       {
@@ -1002,7 +970,6 @@
     });
   })();
 
-  /* ---------- МИНИ-КОНСОЛЬ ---------- */
   (function () {
     var log = document.getElementById('consoleLog');
     var input = document.getElementById('consoleInput');
@@ -1012,8 +979,8 @@
       help: 'Доступные команды: help, about, skills, project, contact, whoami, sudo hire me, clear',
       about: 'Веб-разработчик (PHP/MySQL), выпускник РКРИПТ. Прошёл весь путь: от БД до продакшна.',
       skills: 'PHP, MySQL, HTML5/CSS3, JS/AJAX, phpMyAdmin, деплой, отладка, Git, техдокументация — подробности в разделе «Навыки».',
-      project: 'Дипломный проект — сайт ООО «Посейдон»: каталог, корзина, избранное, админ-панель. Ссылка в разделе «Проект».',
-      contact: 'EMAIL: rudomaharoman@gmail.com · TELEGRAM: @marcisyka',
+      project: 'Сайт ООО «Посейдон»: каталог, корзина, избранное, админ-панель. Ссылка в разделе «Работы».',
+      contact: 'EMAIL: rudomaharoman@gmail.com · TELEGRAM: @marcisyka · GITHUB: github.com/huemue',
       whoami: 'guest — но было бы неплохо стать частью команды :)',
       clear: '__CLEAR__'
     };
@@ -1056,7 +1023,6 @@
     });
   })();
 
-  /* ---------- ПАСХАЛКА: КОНАМИ-КОД ---------- */
   (function () {
     var seq = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
     var pos = 0;
